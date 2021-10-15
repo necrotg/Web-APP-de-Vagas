@@ -1,0 +1,261 @@
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<link rel="stylesheet" th:href="@{/CSS/Style.css}">
+	<script th:src="@{/JS/Script.js}"></script>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<title>Cadastrar</title>
+</head>
+
+<body bgcolor="#1E1A1A">
+			<div align="center">
+				<h1 style="color: aliceblue">Cadastro de Vaga</h1>
+			</div>
+	<div class="a">
+			<div style="margin-left: 5%;margin-right: 5%;padding: 10px">
+				<div> 
+					<label>Tipo de Vaga</label>
+				</div>
+				<select onChange="getOption(this)">
+					<option value="CLT">CLT</option>
+					<option value="Estagio">Estagio</option>
+					<option value="Treinee">Treinee</option>
+				</select>
+			</div>
+	<form method="post">	
+		<div class="content" id="CLT">
+			<input type="hidden" name="dtype" value="clt">
+			<div>
+				<div>
+					<label>Título da Vaga</label>
+				</div>
+				<div>
+					<input type="text" required name="titulo">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Descrição</label>
+				</div>
+				<div>
+					<input style="height: 80px" type="text" required name="descrisao">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Cidade</label>
+				</div>
+				<div>
+					<input type="text" required name="cidade">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Estado</label>
+				</div>
+				<div>
+					<input type="text" required name="estado">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>País</label>
+				</div>
+				<div>
+					<input type="text" required name="pais">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Salário</label>
+				</div>
+				<div>
+					<input type="text" required name="salario">
+				</div>
+			</div>	
+			<div  style="margin-top: 5%">
+				<button type="submit" >Cadastrar</button>
+			</div>
+		</div>
+	</form>
+	<form method="post">
+		<div class="content" id="Estagio">
+			<input type="hidden" name="dtype" value="estagio">
+			<div>
+				<div>
+					<label>Título da Vaga</label>
+				</div>
+				<div>
+					<input type="text" required name="titulo">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Descrição</label>
+				</div>
+				<div>
+					<input style="height: 80px" type="text" required name="descricao">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Cidade</label>
+				</div>
+				<div>
+					<input type="text" required name="cidade">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Estado</label>
+				</div>
+				<div>
+					<input type="text" required name="estado">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>País</label>
+				</div>
+				<div>
+					<input type="text" required name="pais">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Salário</label>
+				</div>
+				<div>
+					<input type="text" required name="salario">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Semestre</label>
+				</div>
+				<div>
+					<select name="semestre">
+						<option value="1º Semestre">1º Semestre</option>
+						<option value="2º Semestre">2º Semestre</option>
+						<option value="3º Semestre">3º Semestre</option>
+						<option value="4º Semestre">4º Semestre</option>
+						<option value="5º Semestre">5º Semestre</option>
+						<option value="6º Semestre">6º Semestre</option>
+						<option value="7º Semestre">7º Semestre</option>
+						<option value="8º Semestre">8º Semestre</option>
+						<option value="9º Semestre">9º Semestre</option>
+						<option value="10º Semestre">10º Semestre</option>
+						<option value="11º Semestre">11º Semestre</option>
+						<option value="12º Semestre">12º Semestre</option>
+					</select>
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Curso</label>
+				</div>
+				<div>
+					<input type="text" required name="curso">
+				</div>
+			</div>
+			<div  style="margin-top: 5%">
+				<button type="submit" >Cadastrar</button>
+			</div>
+		</div>
+	</form>
+		<form method="post">
+		<div class="content" id="Treinee">
+			<input type="hidden" name="dtype" value="treinee">
+			<div>
+				<div>
+					<label>Título da Vaga</label>
+				</div>
+				<div>
+					<input type="text" required name="titulo">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Descrição</label>
+				</div>
+				<div>
+					<input style="height: 80px" type="text" required name="descrisao">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Cidade</label>
+				</div>
+				<div>
+					<input type="text" required name="cidade">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Estado</label>
+				</div>
+				<div>
+					<input type="text" required name="estado">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>País</label>
+				</div>
+				<div>
+					<input type="text" required name="pais">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Salário</label>
+				</div>
+				<div>
+					<input type="text" required name="salario">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Semestre</label>
+				</div>
+				<div>
+					<select name="semestre">
+						<option value="1º Semestre">1º Semestre</option>
+						<option value="2º Semestre">2º Semestre</option>
+						<option value="3º Semestre">3º Semestre</option>
+						<option value="4º Semestre">4º Semestre</option>
+						<option value="5º Semestre">5º Semestre</option>
+						<option value="6º Semestre">6º Semestre</option>
+						<option value="7º Semestre">7º Semestre</option>
+						<option value="8º Semestre">8º Semestre</option>
+						<option value="9º Semestre">9º Semestre</option>
+						<option value="10º Semestre">10º Semestre</option>
+						<option value="11º Semestre">11º Semestre</option>
+						<option value="12º Semestre">12º Semestre</option>
+					</select>
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Curso</label>
+				</div>
+				<div>
+					<input type="text" required name="curso">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label>Conclusão</label>
+				</div>
+				<div>
+					<input type="text" required name="conclusao">
+				</div>
+			</div>
+			<div  style="margin-top: 5%">
+				<button type="submit" >Cadastrar</button>
+			</div>
+		</div>
+	</form>
+	</div>
+</body>
+</html>
