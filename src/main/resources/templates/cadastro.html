@@ -22,9 +22,9 @@
 					<option value="Treinee">Treinee</option>
 				</select>
 			</div>
-	<form method="post">	
+	<form method="post" th:object="${vaga}">
 		<div class="content" id="CLT">
-			<input type="hidden" name="dtype" value="clt">
+			<input type="hidden" name="dtype" value="Vaga">
 			<div>
 				<div>
 					<label>Título da Vaga</label>
@@ -38,7 +38,7 @@
 					<label>Descrição</label>
 				</div>
 				<div>
-					<input style="height: 80px" type="text" required name="descrisao">
+					<input style="height: 80px" type="text" required name="descricao">
 				</div>
 			</div>
 			<div>
@@ -78,9 +78,9 @@
 			</div>
 		</div>
 	</form>
-	<form method="post">
+	<form method="post" th:object="${estagio}">
 		<div class="content" id="Estagio">
-			<input type="hidden" name="dtype" value="estagio">
+			<input type="hidden" name="dtype" value="Estagio">
 			<div>
 				<div>
 					<label>Título da Vaga</label>
@@ -165,7 +165,7 @@
 	</form>
 		<form method="post">
 		<div class="content" id="Treinee">
-			<input type="hidden" name="dtype" value="treinee">
+			<input type="hidden" name="dtype" value="Treinee">
 			<div>
 				<div>
 					<label>Título da Vaga</label>

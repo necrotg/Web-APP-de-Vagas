@@ -1,0 +1,58 @@
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <link rel="stylesheet" th:href="@{/CSS/Style.css}">
+  <meta charset="utf-8">
+  <title>Univagas Home</title>
+</head>
+
+<body bgcolor="#1E1A1A">
+<div style="margin-top: 1%;margin-left: 1%">
+  <a href="/home">
+    <img th:src="@{/IMG/logo.png}" height="106" width="560">
+  </a>
+</div>
+<div style ="display: flex; margin-right: 80%; align-items: center">
+  <div style="margin-right: 5%">
+    <a href="/home" style="color: azure">VAGAS</a>
+  </div>
+  <div>
+    <a href="/login" style="color: azure">CADASTRAR VAGA</a>
+  </div>
+</div>
+<div style="margin-left: 6%">
+
+    <div style="color: aliceblue; font-size: 20px" th:each="vaga : ${vaga}">
+      <h5>Detalhes da Vaga</h5>
+      <div>
+        <p>Título: <span th:text="${vaga.titulo}"></span></p>
+        <p>Descrição: <span th:text="${vaga.descricao}"></span></p>
+        <p>Cidade: <span th:text="${vaga.cidade}"></span></p>
+        <p>Salário: <span th:text="${vaga.salario}"></span></p>
+      </div>
+    </div>
+
+</div>
+<form method="post">
+  <div align="center">
+  <div align="left" style="width: 400px">
+   <div>
+      <label>Nome:</label>
+      <input type="text" name="nome" required>
+   </div>
+    <div>
+      <label>Contato:</label>
+      <input type="text" name="contato" required>
+   </div>
+    <div>
+      <label>Curriculo:</label>
+      <input type="file" name="curriculo" required>
+    </div>
+    <div align="center">
+      <button type="submit"  >Aplicar</button>
+    </div>
+  </div>
+  </div>
+</form>
+</body>
+</html>

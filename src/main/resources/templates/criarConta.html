@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <link rel="stylesheet" th:href="@{/CSS/Style.css}">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>Univagas</title>
+</head>
+<body bgcolor="#1E1A1A">
+    <form method="post">
+    <div class="content">
+        <div>
+            <label>Razão Social:</label>
+            <input type="text" name="razao" required>
+        </div>
+        <div>
+            <label>CNPJ:</label>
+            <input type="text" name="cnpj" required>
+        </div>
+        <div>
+            <label>Login:</label>
+            <input type="text" name="username" required>
+        </div>
+        <div>
+            <label>Senha:</label>
+            <input type="password" name="password" required>
+        </div>
+        <div>
+            <label>Digite senha novamente:</label>
+            <input type="password" required>
+        </div>
+        <button type="submit">Criar</button>
+    </div>
+    </form>
+</body>
+</html>

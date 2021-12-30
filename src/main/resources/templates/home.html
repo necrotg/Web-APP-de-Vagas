@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <link rel="stylesheet" th:href="@{/CSS/Style.css}">
+  <meta charset="utf-8">
+  <title>Univagas Home</title>
+</head>
+
+<body bgcolor="#1E1A1A">
+<div style="margin-top: 1%;margin-left: 1%">
+  <a href="/home">
+    <img th:src="@{/IMG/logo.png}" height="106" width="560">
+  </a>
+</div>
+<div style ="display: flex; margin-right: 80%; align-items: center">
+  <div style="margin-right: 5%">
+    <a href="/home" style="color: azure">VAGAS</a>
+  </div>
+  <div>
+    <a href="/login" style="color: azure">CADASTRAR VAGA</a>
+  </div>
+</div>
+<div style="margin-right: 60%;margin-top: 2%">
+  <table  style="width: 100%; border: 2px outset black; color: aliceblue" class="content">
+    <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Salario</th>
+      <th>Cidade</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vaga : ${vagas}">
+      <td><span th:text="${vaga.titulo}"></span></td>
+      <td><span th:text="${vaga.salario}"></span></td>
+      <td><span th:text="${vaga.cidade}"></span></td>
+      <td align="center"><a th:href="${(#mvc.url('HC#detalhesVaga').arg(0, vaga.id)).build()}">Aplicar</a></td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
+
+
+
+</body>
+</html>

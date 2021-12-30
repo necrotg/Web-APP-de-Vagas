@@ -1,15 +1,15 @@
 @charset "utf-8";
-.button{
-	font-size: 20px;
-	font: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	border-right-style: none;
-	border-left-style: none;
-	border-bottom-style: none;
-	border-top-style: none;
-	border-color: #1E1A1A;
-	background-color: #1E1A1A;
-	height: 100px;
-	width: 300px;
+tr:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+}
+tr {
+    border: 2px solid white;
+}
+tdb {
+    border: 2px solid white;
+}
+tr:hover{
+    opacity: 0.8;
 }
 .img{
 	margin-top: 4%;
@@ -58,12 +58,18 @@ button {
   background-color: #1E1A1A;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  height: 40px;
 }
 label{
 	color: aliceblue;
 }
-
+a:link{
+    color: #1a61ff;
+    text-decoration: none;
+}
+a:visited, a:hover{
+    color: #8b36ff;
+    text-decoration: none;
+}

@@ -1,10 +1,8 @@
 package com.crimson.univagas2.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Vaga  implements Serializable {
@@ -18,6 +16,12 @@ public class Vaga  implements Serializable {
     private String estado;
     private String pais;
     private Double salario;
+
+    @OneToMany
+    private List<Aplicante> aplicantes;
+
+    @ManyToOne
+    private Empresa empresa;
 
     public Long getId() {
         return id;
@@ -35,11 +39,11 @@ public class Vaga  implements Serializable {
         this.titulo = titulo;
     }
 
-    public String getDecrisao() {
+    public String getDescricao() {
         return descricao;
     }
 
-    public void setDecrisao(String descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
@@ -75,5 +79,12 @@ public class Vaga  implements Serializable {
         this.salario = salario;
     }
 
+    public List<Aplicante> getAplicantes() {
+        return aplicantes;
+    }
+
+    public void setAplicantes(List<Aplicante> aplicantes) {
+        this.aplicantes = aplicantes;
+    }
 }
 
